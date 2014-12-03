@@ -1,3 +1,13 @@
+CHANGES IN VERSION 0.5.9
+------------------------
+ o fasta file with 3 sequences in extdata and fun to debug in
+   inst/scripts [2014-11-01 Sat]
+ o use knitr for vignette [2014-11-01 Sat]
+ o fix duplicated sequence name in fasta file (pull request by Julian
+   Gehring) [2014-11-09 Sun]
+ o Title: Use title case and remove period [2014-12-03 Wed]
+ o fix readFasta example and test to use first file [2014-12-03 Wed]
+ 
 CHANGES IN VERSION 0.5.8
 ------------------------
  o update to testthat 0.8 [2014-03-14 Fri]
@@ -68,7 +78,8 @@ CHANGES IN VERSION 0.3.7
 
 CHANGES IN VERSION 0.3.6
 ------------------------
- o update print method, remove pgfSweave dependency for vignette and added print exemple chunk
+ o update print method, remove pgfSweave dependency for vignette and
+ added print exemple chunk
 
 CHANGES IN VERSION 0.3.5
 ------------------------

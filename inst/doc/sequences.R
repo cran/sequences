@@ -1,38 +1,21 @@
-### R code from vignette source 'sequences.Rnw'
-
-###################################################
-### code chunk number 1: load
-###################################################
-library(sequences)
-fastafilename <- dir(system.file(package="sequences",dir="extdata"),
+## ----loadseq-------------------------------------------------------------
+library("sequences")
+fastafilename <- dir(system.file(package="sequences", dir="extdata"),
                      full.name=TRUE,
                      pattern="fasta$")
 fastafilename
-myseq <- readFasta(fastafilename)
+myseq <- readFasta(fastafilename[1])
 myseq
 
-
-###################################################
-### code chunk number 2: printseq
-###################################################
+## ----printseq------------------------------------------------------------
 print(myseq)
 
-
-###################################################
-### code chunk number 3: transcribe
-###################################################
+## ----transcribe----------------------------------------------------------
 transcribe(myseq)
 
-
-###################################################
-### code chunk number 4: gccount
-###################################################
+## ----gccount, dev='pdf', echo=TRUE,fig.width=6, fig.height=4-------------
 barplot(gccount(seq(myseq)))
 
-
-###################################################
-### code chunk number 5: sessioninfo
-###################################################
+## ----sessioninfo, results='asis', echo=FALSE, cache=FALSE----------------
 toLatex(sessionInfo())
-
 

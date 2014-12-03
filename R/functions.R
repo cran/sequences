@@ -11,7 +11,7 @@
 ##' @examples
 ##' f <- dir(system.file("extdata",package="sequences"),pattern="fasta",full.names=TRUE)
 ##' f
-##' aa <- readFasta(f)
+##' aa <- readFasta(f[1])
 ##' aa
 ##' @author Laurent Gatto \email{lg390@@cam.ac.uk}
 ##' @keywords IO, file
@@ -52,4 +52,11 @@ gccount2 <- function(inseq) {
   .Call("gccount2",
         inseq,
         PACKAGE="sequences")
+}
+
+
+debugme <- function() {
+    f <- list.files(system.file("scripts", package = "sequences"),
+                    full.names = TRUE)
+    source(f)
 }
